@@ -1,0 +1,7 @@
+---
+
+- name: packages
+  shell: >
+    gem install capifony -v "{{ version }}"
+    creates=/usr/local/bin/capifony
+  sudo: yes
