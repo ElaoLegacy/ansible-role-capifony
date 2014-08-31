@@ -1,7 +1,8 @@
 ---
 
 - name: packages
-  shell: >
-    gem install capifony -v "{{ version }}"
-    creates=/usr/local/bin/capifony
+  gem: >
+    name=capifony
+    state=present
+    user_install=no
   sudo: yes
