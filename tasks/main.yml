@@ -2,7 +2,9 @@
 
 - name: packages
   gem: >
-    name=capifony
+    name={{ item }}
     state=present
     user_install=no
+  with_items:
+    - capifony
   sudo: yes
